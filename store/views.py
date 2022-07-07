@@ -6,12 +6,8 @@ import json
 def index(request):
     products = Product.objects.all()
     categories = Category.objects.all().order_by('name')
-    return render(request, 'index.html',context={'products':products, 'categories':categories})
+    return render(request, 'index.html', context={'products': products, 'categories': categories})
 
-# def index(request):
-#     products = Product.objects.all()
-#     categories = Category.objects.all().order_by('name')
-#     return render(request, 'index.html',context={'products':products, 'categories':categories})
 
 # def search(request):
 #     if request.method=='POST':

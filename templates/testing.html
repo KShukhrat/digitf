@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
+{% for product in products %}
       <section class="brand_section layout_padding">
     <div class="container">
       <div class="heading_container">
@@ -8,15 +10,9 @@
           Featured Brands
         </h2>
       </div>
-        {% for p in pr %}
       <div class="brand_container layout_padding2">
         <div class="box">
           <a href="">
-{#            <div class="new">#}
-{#              <h5>#}
-{#                New#}
-{#              </h5>#}
-{#            </div>#}
             <div class="img-box">
               <img src="{% static 'images/slider-img.png'%}" alt="">
             </div>
