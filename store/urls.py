@@ -11,4 +11,7 @@ urlpatterns = [
     path('testing/', testing, name='testing'),
     path('base/', base, name='base'),
 
+    # AUTH
+    path('login/', login, name='login'),
+    path('register/', register, name='register'),
 ]

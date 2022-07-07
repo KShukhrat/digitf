@@ -1,4 +1,10 @@
-from django.shortcuts import render
+from django.db.models import Q
+from django.shortcuts import render, redirect
+from .forms import RegistrationForm, LoginForm
+from django.contrib.auth import authenticate, login, logout
+
+from .models import Product
+
 
 def index(request):
     return render(request,'index.html')
@@ -27,3 +33,33 @@ def testing(request):
 def base(request):
     return render(request, 'base.html')
 
+def login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(request, username=username, password=password)
+            print(user)
+            if user:
+                login(request, user)
+                return redirect('index')
+    return render(request, 'auth/login.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = request.POST['username']
+            password = request.POST['password1']
+            user = authenticate(request, username=username, password=password)
+            print(user)
+            if user:
+                login(request, user)
+                return redirect('index')
+    return render(request, 'auth/register.html')
+
+def logout(request):
+    logout(request)
+    return redirect('login')
