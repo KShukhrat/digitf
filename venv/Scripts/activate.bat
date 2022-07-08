@@ -8,11 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-<<<<<<< HEAD
-set VIRTUAL_ENV=C:\Python\digitf\venv
-=======
-set VIRTUAL_ENV=C:\Users\alfatech.uz\Desktop\it park\Django\digitf\venv
->>>>>>> 5e2df7f55893184d47689241feda49e03586461e
+set VIRTUAL_ENV=C:\Users\shuhr\PycharmProjects\digitf\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
@@ -29,10 +25,6 @@ if defined _OLD_VIRTUAL_PATH set PATH=%_OLD_VIRTUAL_PATH%
 if not defined _OLD_VIRTUAL_PATH set _OLD_VIRTUAL_PATH=%PATH%
 
 set PATH=%VIRTUAL_ENV%\Scripts;%PATH%
-<<<<<<< HEAD
-=======
-set VIRTUAL_ENV_PROMPT=(venv) 
->>>>>>> 5e2df7f55893184d47689241feda49e03586461e
 
 :END
 if defined _OLD_CODEPAGE (

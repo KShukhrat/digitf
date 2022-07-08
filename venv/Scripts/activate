@@ -28,10 +28,6 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
-<<<<<<< HEAD
-=======
-    unset VIRTUAL_ENV_PROMPT
->>>>>>> 5e2df7f55893184d47689241feda49e03586461e
     if [ ! "${1:-}" = "nondestructive" ] ; then
     # Self destruct!
         unset -f deactivate
@@ -41,11 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
-VIRTUAL_ENV="C:\Python\digitf\venv"
-=======
-VIRTUAL_ENV="C:\Users\alfatech.uz\Desktop\it park\Django\digitf\venv"
->>>>>>> 5e2df7f55893184d47689241feda49e03586461e
+VIRTUAL_ENV="C:\Users\shuhr\PycharmProjects\digitf\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -64,11 +56,6 @@ if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
     PS1="(venv) ${PS1:-}"
     export PS1
-<<<<<<< HEAD
-=======
-    VIRTUAL_ENV_PROMPT="(venv) "
-    export VIRTUAL_ENV_PROMPT
->>>>>>> 5e2df7f55893184d47689241feda49e03586461e
 fi
 
 # This should detect bash and zsh, which have a hash command that must
