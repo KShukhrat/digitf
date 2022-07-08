@@ -2,14 +2,14 @@
 {% load static %}
 <html lang="en">
   <head>
-  	<title>Register</title>
+  	<title>Login 10</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	
 	<link rel="stylesheet" href="{% static 'auth/css/style.css' %}">
 
 	</head>
@@ -24,7 +24,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
-		      	<form method="post" action="#" class="signin-form">
+		      	<form method="post" class="signin-form">
                     {% csrf_token %}
 {#                    Username#}
 		      		<div class="form-group">
@@ -33,7 +33,7 @@
 
 {#                    Email#}
 		      		<div class="form-group">
-		      			<input type="tel" name="phone" class="form-control" maxlength="13" placeholder="Phone number" required>
+		      			<input type="email" name="email" class="form-control" maxlength="100" placeholder="Email" required>
 		      		</div>
 
 {#                    Password1#}
@@ -76,5 +76,6 @@
   <script src="{% static 'auth/js/bootstrap.min.js' %}"></script>
   <script src="{% static 'auth/js/main.js' %}"></script>
 
-</body>
+	</body>
 </html>
+

@@ -33,7 +33,7 @@ def testing(request):
 def base(request):
     return render(request, 'base.html')
 
-def login(request):
+def log_in(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -58,8 +58,11 @@ def register(request):
             if user:
                 login(request, user)
                 return redirect('index')
-    return render(request, 'auth/register.html')
+            print('no user')
+    return render(request, 'auth/register.html', {})
 
-def logout(request):
+# 1234!@qwert
+
+def log_out(request):
     logout(request)
     return redirect('login')

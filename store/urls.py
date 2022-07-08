@@ -12,6 +12,7 @@ urlpatterns = [
     path('base/', base, name='base'),
 
     # AUTH
-    path('login/', login, name='login'),
+    path('login/', log_in, name='login'),
     path('register/', register, name='register'),
+    path('log_out/', log_out, name='log_out'),
 ]
