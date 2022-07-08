@@ -10,6 +10,7 @@ urlpatterns = [
     path('shop/', shop, name='shop'),
     path('testing/', testing, name='testing'),
     path('base/', base, name='base'),
+    path('base/', base, name='base'),
 
     # AUTH
     path('login/', log_in, name='login'),
