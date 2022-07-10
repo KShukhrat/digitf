@@ -63,12 +63,31 @@
               </li>
             </ul>
             <div class="user_option">
-              <a href="">
+                                {% if request.user.is_superuser %}
+              <a href="{% url 'index' %}">
                 <img src="{% static 'images/user.png' %}" alt="">
                 <span>
-                  Login
+                  {{ request.user.username }} |
                 </span>
               </a>
+              <a href="{% url 'log_out' %}">
+                <span>
+                  Logout
+                </span>
+              </a>
+                    {% else %}
+              <a href="{% url 'login' %}">
+                <img src="{% static 'images/user.png' %}" alt="">
+                <span>
+                  Login |
+                </span>
+              </a>
+              <a href="{% url 'log_out' %}">
+                <span>
+                  Logout
+                </span>
+              </a>
+                     {% endif %}
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
               </form>
