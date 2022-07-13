@@ -13,62 +13,22 @@
                 </h2>
               </div>
               <div class="tab_container">
+                  {% for cat in category %}
                 <div class="t-link-box" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                   aria-controls="collapseOne">
                   <div class="number">
                     <h5>
-                      01
+                      {{ cat.id }}
                     </h5>
                   </div>
                   <hr>
                   <div class="t-name">
                     <h5>
-                      Chairs
+                      {{ cat.name }}
                     </h5>
                   </div>
                 </div>
-                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                  aria-expanded="false" aria-controls="collapseTwo">
-                  <div class="number">
-                    <h5>
-                      02
-                    </h5>
-                  </div>
-                  <hr>
-                  <div class="t-name">
-                    <h5>
-                      Tables
-                    </h5>
-                  </div>
-                </div>
-                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseThree"
-                  aria-expanded="false" aria-controls="collapseThree">
-                  <div class="number">
-                    <h5>
-                      03
-                    </h5>
-                  </div>
-                  <hr>
-                  <div class="t-name">
-                    <h5>
-                      Bads
-                    </h5>
-                  </div>
-                </div>
-                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFour"
-                  aria-expanded="false" aria-controls="collapseFour">
-                  <div class="number">
-                    <h5>
-                      04
-                    </h5>
-                  </div>
-                  <hr>
-                  <div class="t-name">
-                    <h5>
-                      Furnitures
-                    </h5>
-                  </div>
-                </div>
+                  {% endfor %}
               </div>
             </div>
           </div>

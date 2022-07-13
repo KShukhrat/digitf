@@ -9,7 +9,7 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=100)
-    price = models.FloatField()
+    price = models.IntegerField()
     image = models.ImageField(upload_to='Product')
     description = models.TextField()
 

@@ -17,7 +17,9 @@ def contact(request):
     return render(request, 'contact.html')
 
 def furniture(request):
-    return render(request, 'furniture.html')
+    category = Category.objects.all()
+    product = Product.objects.all().order_by('name')
+    return render(request, 'furniture.html', context={'category': category, 'product': product})
 
 def shop(request):
     products = Product.objects.all()
